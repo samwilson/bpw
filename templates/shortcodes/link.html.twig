@@ -1,0 +1,3 @@
+{% set p = database.query('SELECT * FROM pages WHERE id = "' ~ shortcode.attrs.1 ~ '"').fetch() %}
+
+<a href="{{page.link(p.id)}}.html">{{p.title}}</a>

@@ -1,0 +1,3 @@
+{% set p = database.query('SELECT * FROM pages WHERE id = "' ~ shortcode.attrs.1 ~ '"').fetch() %}{#
+
+#}\textsc{{'{'}}{{p.title}}{{'}'}}\footnote{{'{'}}\url{{'{'}}{{site.config.url ~ p.id}}.html{{'}'}}{{'}'}}

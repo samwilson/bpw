@@ -1,0 +1,36 @@
+{% autoescape 'tex' %}
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx, url, listings, float, }
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,  % Colours links instead of ugly boxes
+    urlcolor   = black, % Colour for external hyperlinks
+    linkcolor  = black, % Colour of internal links
+    citecolor  = black  % Colour of citations
+}
+
+\lstset{
+    basicstyle=\normalsize\fontencoding{T1}\ttfamily,
+    showstringspaces=true
+}
+
+\title{B.P.W. Family (Public Website)}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    {{ page.body|md2latex|raw }}
+
+    {% for p in database.query('SELECT * FROM pages ORDER BY id ASC').fetchAll() %}
+
+        \section{ {{ p.title }} }
+
+        {{ p.body|md2latex|raw }}
+
+    {% endfor %}
+
+\end{document}
+{% endautoescape %}

@@ -1,8 +1,8 @@
 {
-    "name": "samwilson/basildon-skeleton",
-    "description": "A bare-bones Basildon site.",
-    "license": "GPL-3.0-or-later",
     "require": {
-        "samwilson/basildon": "^4"
+        "samwilson/basildon": "^6"
+    },
+    "scripts": {
+        "build": "basildon build ."
     }
 }

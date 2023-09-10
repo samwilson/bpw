@@ -1,15 +1,14 @@
 ----
 template: index
-title: Basildon Skeleton Site
+title: Welcome
 ----
 
-This is a bare-bones demonstration of [Basildon](https://basildon.netlify.app/), a static site generator.
+{{{figure|src=./people/bpw.jpg|align=left|alt=Black and white photographic portrait of Bertold Wiesner.
+Bertold Wiesner c.1930s.
+}}}
 
-* Example site: [samwilson.github.io/basildon-skeleton](https://samwilson.github.io/basildon-skeleton/)
-* Source code: [https://github.com/samwilson/basildon-skeleton](https://github.com/samwilson/basildon-skeleton/)
+This website documents the work and genealogy of {link|/people/bpw} and {link|/people/mary-barton}.
+It can be downloaded as [a single PDF](./bpw-family-public-site.pdf).
 
-Create a new project with the following command:
-
-    composer create-project samwilson/basildon-skeleton path/to/new-project
-
-Or [deploy a new site with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/samwilson/basildon-skeleton).
+For more information about anything relating to the above research or this website,
+please contact [info@bpw.family](mailto:info@bpw.family).
