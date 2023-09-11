@@ -2,15 +2,14 @@
     "require": {
         "samwilson/basildon": "^6"
     },
-    "config": {
-        "platform": {
-            "php": "8.0"
-        }
-    },
     "scripts": {
         "build": [
             "./node_modules/.bin/markdownlint content",
             "basildon build ."
+        ],
+        "deploy": [
+            "@build",
+            "./node_modules/.bin/netlify deploy --prod"
         ]
     }
 }
