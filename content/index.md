@@ -1,7 +1,7 @@
-----
+---
 template: index
 title: Welcome
-----
+---
 
 {{{figure|src=./people/bpw.jpg|align=left|alt=Black and white photographic portrait of Bertold Wiesner.
 Bertold Wiesner c.1930s.

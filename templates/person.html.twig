@@ -17,13 +17,13 @@
 {% endif %}
 
 {% macro wikidataDate(datavalue) %}
-    {% set format = 'Y' %}
     {% if datavalue.precision == 10 %}
-        {% set format = 'F Y' %}
+        {{ datavalue.time|date('F Y') }}
     {% elseif datavalue.precision == 11 %}
-        {% set format = 'j F Y' %}
+        {{ datavalue.time|date('j F Y') }}
+    {% else %}
+        {{ datavalue.time|slice(1,4) }}
     {% endif %}
-    {{ datavalue.time|date(format) }}
 {% endmacro %}
 
 {% macro dateAndPlaceField( wikidata_item, label, attrName, propName ) %}
@@ -79,7 +79,7 @@
             <small>
                 <strong>Authority control:</strong>
                 {% if wikidata_item %}
-                    Wikidata: <a href="https://www.wikidata.org/wiki/{{wikidata_item.id}}">{{wikidata_item.id}}</a>
+                    Wikidata: <a href="https://www.wikidata.org/wiki/{{wikidata_item.id}}">{{wikidata_item.id}}</a>.
                     {% for claims in wikidata_item.claims %}
                         {% for snak in claims %}
                             {% if snak.mainsnak.datatype == 'external-id' and snak.mainsnak.snaktype == 'value' %}
@@ -88,9 +88,9 @@
                                 <span class="label">{{authControlItem.labels.en.value}}:</span>
                                 {% if attribute(authControlItem.claims, PROP_FORMATTER_URL).0 is defined %}
                                     {% set url = attribute(authControlItem.claims, PROP_FORMATTER_URL).0.mainsnak.datavalue.value | replace({'$1': value}) %}
-                                    <a href="{{url}}" class="value">{{value}}</a>
+                                    <a href="{{url}}" class="value">{{value}}</a>.
                                 {% else %}
-                                    <span class="value">{{value}}</span>
+                                    <span class="value">{{value}}</span>.
                                 {% endif %}
                             {% endif %}
                         {% endfor %}

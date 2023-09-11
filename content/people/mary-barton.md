@@ -23,11 +23,11 @@ Married Bertold in about March 1943.
 Died in 1990. Her gravestone reads:
 
 {{{quotation
-Dr Mary Wiesner
-Née Worthington
-1905–1990
-Medical practitioner North-West Frontier of India
-Consultant Gynecologist London
+Dr Mary Wiesner {br}
+Née Worthington {br}
+1905–1990 {br}
+Medical practitioner North-West Frontier of India {br}
+Consultant Gynecologist London {br}
 Pioneer in fertility
 
 Her spirit and work live on.
