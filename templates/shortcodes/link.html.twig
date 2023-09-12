@@ -1,3 +1,3 @@
 {% set p = database.query('SELECT * FROM pages WHERE id = "' ~ shortcode.attrs.1 ~ '"').fetch() %}
 
-<a href="{{page.link(p.id)}}.html">{{p.title}}</a>
+<a href="{{page.link(p.id)}}.html">{% if shortcode.attrs.2 is defined %}{{shortcode.attrs.2}}{% else %}{{p.title}}{% endif %}</a>

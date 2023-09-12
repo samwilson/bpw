@@ -1,0 +1,19 @@
+{% extends 'index.html.twig' %}
+
+{% block body %}
+
+<figure class="figure float-end ms-3">
+    <img src="{{page.metadata.image}}" class="figure-img img-fluid" />
+</figure>
+<dl class="border-bottom">
+    <dt>Title:</dt>
+    <dd>{{page.metadata.title}}</dd>
+    <dt>Date:</dt>
+    <dd>{{page.metadata.date|date('Y-m-d')}}</dd>
+    <dt>Description:</dt>
+    <dd>{{page.metadata.description|md2html|raw}}</dd>
+</dl>
+
+{{page.body|md2html|raw}}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'index.html.twig' %}
+
+{% block body %}
+
+    <ul>
+    {% for d in database.query('SELECT * FROM pages WHERE template="document" ORDER BY date ASC') %}
+
+        <li>
+            <p>
+                <strong>
+                    {{d.date|date('Y-m-d')}}
+                    <a href="{{page.link(d.id)}}.html">{{d.title}}</a>
+                </strong>
+            </p>
+            {{d.description|md2html|raw}}
+        </li>
+
+    {% endfor %}
+    </ul>
+
+{% endblock %}
