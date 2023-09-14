@@ -1,4 +1,3 @@
-Basildon Skeleton
-=================
+# BPW (public site)
 
-See https://samwilson.github.io/basildon-skeleton/ for the deployed site.
+This is the source code repository for the public website.
