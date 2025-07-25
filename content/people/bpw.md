@@ -1,6 +1,6 @@
 ---
 template: person
-title: Bertold Wiesner
+title: Bertold Paul Wiesner
 wikidata: Q89289
 image: bpw.jpg
 ---
