@@ -2,5 +2,6 @@
 template: person
 title: Bertold Paul Wiesner
 wikidata: Q89289
-image: bpw.jpg
+image:
+  - commons: Bertold Wiesner larger.jpg
 ---

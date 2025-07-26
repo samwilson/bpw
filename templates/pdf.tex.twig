@@ -28,9 +28,10 @@
 
     {{ page.body|md2latex|raw }}
 
-    {% for p in database.query('SELECT * FROM pages ORDER BY id ASC').fetchAll() %}
+    {% for p in database.query('SELECT * FROM pages WHERE id NOT LIKE "/bpw-family-public-site" ORDER BY print_order ASC, title ASC').fetchAll() %}
 
         \section{ {{ p.title }} }
+        \url{ {{site.config.url}}{{p.id}}.html }
 
         {{ p.body|md2latex|raw }}
 
