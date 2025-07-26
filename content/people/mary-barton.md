@@ -18,7 +18,7 @@ ancestry: 240025441423
 keywords: 
 ---
 
-Married Bertold in about March 1943.
+Married {link|/people/bpw|Bertold} in about March 1943.
 
 Died in 1990. Her gravestone reads:
 
