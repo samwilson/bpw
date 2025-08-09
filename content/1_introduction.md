@@ -8,4 +8,6 @@ Bertold Paul Wiesner.  Husband to Ana Gmeyer, and later, husband to Mary Barton.
 
 As far as we know, he started donating as early as 1942,  as we know of at least one baby born in 1943 (Michael M.), and then, in 1944, Peter M. was born: the same year as Jonathan who was BPW’s “actual” and known growing up  son. From then on, we know of at least two or three people born in each year who are his offspring: the last ones were born in 1967.   And this does not take into account of all the unknown babies, born between 1943 and 1967, who have not found out about their parentage (usually via direct to consumer DNA testing) or have chosen to keep the knowledge private.   
 
+{{{figure|filename=bpw.jpg|caption=BPw in 1930.}}}
+
 Maybe starting with where he came from will begin to  illuminate the person he became, although it never seems to me that his Jewish background informed his decision to become – to be blunt – a prolific sperm donor.  There will always be so many unanswered questions: for example,  did he know what was happening to Jewish people during the war?   It seems as if he was a secular Jew as he did not attend synagogue, and the family did not keep to Jewish customs at home. 
