@@ -1,0 +1,11 @@
+---
+title: Introduction
+---
+
+A lot of what follows is a distillation of conversations and emails between Jonathan and various half siblings, plus a narrative of what we know about BPW’s life and work.  My gratitude to Jonathan is immense: he has been endlessly generous with his time and his willingness to share his father with so many others, later in his life.
+
+Bertold Paul Wiesner.  Husband to Ana Gmeyer, and later, husband to Mary Barton.  Father of Eva,  and after a gap of 14 years, father to Jonathan, (and possibly to Ruth),  but  also father to an unknown number of people.  They were, and are real people, with real lives and families, occupations, hopes and fears.  He met none of them, and he knew nothing about them.  Did he think about his numerous offspring? What did it feel like, knowing he was responsible for so many new lives, scattered around the country?   I often wonder whether he thought about the consequences of his decision to “help” so many women conceive.  The sheer number is breathtaking, and the dangers of consanguinity only too obvious, especially as many of the parents lived in the north London area.  (Later in this piece  we can explore the benefits and also the problems associated with anonymous donor conception. ) 
+
+As far as we know, he started donating as early as 1942,  as we know of at least one baby born in 1943 (Michael M.), and then, in 1944, Peter M. was born: the same year as Jonathan who was BPW’s “actual” and known growing up  son. From then on, we know of at least two or three people born in each year who are his offspring: the last ones were born in 1967.   And this does not take into account of all the unknown babies, born between 1943 and 1967, who have not found out about their parentage (usually via direct to consumer DNA testing) or have chosen to keep the knowledge private.   
+
+Maybe starting with where he came from will begin to  illuminate the person he became, although it never seems to me that his Jewish background informed his decision to become – to be blunt – a prolific sperm donor.  There will always be so many unanswered questions: for example,  did he know what was happening to Jewish people during the war?   It seems as if he was a secular Jew as he did not attend synagogue, and the family did not keep to Jewish customs at home. 
