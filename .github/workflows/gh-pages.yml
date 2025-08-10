@@ -14,7 +14,7 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           packages: latex latexmk latex-bin hyperref
-          cache_version: 4
+          cache_version: 5
 
       - name: Build
         run: ./build.sh
