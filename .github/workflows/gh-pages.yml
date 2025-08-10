@@ -14,7 +14,7 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           packages: |
-            latexmk float url graphicx wrapfig ifthen enumitem
+            latexmk float url graphicx wrapfig ifthen enumitem scheme-basic
             imakeidx microtype booktabs caption currfile subcaption textcomp
 
       - name: Build
