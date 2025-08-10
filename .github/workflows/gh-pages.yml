@@ -14,7 +14,7 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           packages: latex latexmk latex-bin hyperref etoolbox todonotes tocbibind cite imakeidx
-          cache_version: 5
+          cache_version: 6
 
       - name: Build
         run: ./build.sh
