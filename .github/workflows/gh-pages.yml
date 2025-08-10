@@ -13,10 +13,8 @@ jobs:
       - name: Set up TeXLive
         uses: zauguin/install-texlive@v4
         with:
-          packages: |
-            latexmk float url graphicx wrapfig ifthen enumitem scheme-basic
-            imakeidx microtype booktabs caption currfile subcaption textcomp
-          cache_version: 2
+          packages: latexmk
+          cache_version: 3
 
       - name: Build
         run: ./build.sh
