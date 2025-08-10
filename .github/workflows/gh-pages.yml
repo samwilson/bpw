@@ -16,7 +16,7 @@ jobs:
           packages: scheme-basic latexmk float
 
       - name: Build
-        run: build.sh
+        run: ./build.sh
 
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@4.1.6
