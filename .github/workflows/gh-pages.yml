@@ -16,7 +16,7 @@ jobs:
           filename: main.tex
 
       - name: Deploy to GH Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.6
+        uses: JamesIves/github-pages-deploy-action@4.7.3
         with:
           branch: gh-pages
           folder: public_html
