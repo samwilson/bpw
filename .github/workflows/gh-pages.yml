@@ -17,6 +17,9 @@ jobs:
         with:
           filename: main.tex
 
+      - name: Copy PDF
+        run: cp ./main.pdf ./public_html/BPW.pdf
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
