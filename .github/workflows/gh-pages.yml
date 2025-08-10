@@ -16,6 +16,7 @@ jobs:
           packages: |
             latexmk float url graphicx wrapfig ifthen enumitem scheme-basic
             imakeidx microtype booktabs caption currfile subcaption textcomp
+          cache_version: 2
 
       - name: Build
         run: ./build.sh
