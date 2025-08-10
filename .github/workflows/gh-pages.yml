@@ -10,13 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
-      - name: Set up TeXLive
-        uses: xu-cheng/texlive-action@v3
-        with:
-          extra_system_packages: latexmk
-
       - name: Build
-        run: ./build.sh
+        run: 
+          sudo apt install -y texlive-full latexmk
+          ./build.sh
 
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@4.1.6
