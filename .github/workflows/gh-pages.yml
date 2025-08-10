@@ -13,7 +13,7 @@ jobs:
       - name: Set up TeXLive
         uses: zauguin/install-texlive@v4
         with:
-          packages: latex latexmk latex-bin
+          packages: latex latexmk latex-bin hyperref
           cache_version: 4
 
       - name: Build
