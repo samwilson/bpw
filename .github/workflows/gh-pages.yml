@@ -12,6 +12,8 @@ jobs:
 
       - name: Set up TeXLive
         uses: xu-cheng/texlive-action@v3
+        with:
+          extra_system_packages: latexmk
 
       - name: Build
         run: ./build.sh
