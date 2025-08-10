@@ -10,10 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
-      - name: Build
-        run: |
-          sudo apt install -y texlive-full latexmk
-          ./build.sh
+      - name: Build PDF
+        uses: hspaans/latexmk-action@v2
+        with:
+          filename: main.tex
 
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@4.1.6
