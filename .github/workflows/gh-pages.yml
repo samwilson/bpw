@@ -13,7 +13,7 @@ jobs:
       - name: Set up TeXLive
         uses: zauguin/install-texlive@v4
         with:
-          packages: latex latexmk latex-bin hyperref etoolbox todonotes tocbibind
+          packages: latex latexmk latex-bin hyperref etoolbox todonotes tocbibind cite
           cache_version: 5
 
       - name: Build
