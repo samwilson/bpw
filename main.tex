@@ -8,29 +8,22 @@
 	\else Cited on pages #2.%
 	\fi%
 }}
-
-
-\usepackage[textsize=tiny]{todonotes}
-\usepackage[numbib, numindex]{tocbibind}
-\usepackage[superscript]{cite}
-
-\usepackage{imakeidx}
-\makeindex[intoc]
-\setcounter{secnumdepth}{0}
-
-\title{B.P.W.}
-\author{\url{https://book.bpw.family}}
-
-% \usepackage{relsize, etoolbox} % http://ctan.org/pkg/{relsize,etoolbox}
-% \AtBeginEnvironment{quotation}{\smaller} % Step font down one size relative to current font.
-% \patchcmd{\quotation}{\rightmargin}{\leftmargin 2em \rightmargin}{}{}
-
 \hypersetup{
   colorlinks = true,  % Colours links instead of ugly boxes
   urlcolor   = blue,  % Colour for external hyperlinks
   linkcolor  = black, % Colour of internal links
   citecolor  = black  % Colour of citations
 }
+
+\usepackage[textsize=tiny]{todonotes}
+\usepackage[numbib, numindex]{tocbibind}
+
+\usepackage[superscript]{cite}
+\renewcommand\citeform[1]{}
+
+\usepackage{imakeidx}
+\makeindex[intoc]
+\setcounter{secnumdepth}{0}
 
 % ---- \bioref{biographies-file-name}
 % The tricky stuff here is explained at https://tex.stackexchange.com/a/357590
@@ -53,7 +46,8 @@
 % ---- \idx{Index words}
 \newcommand{\idx}[1]{#1\index{#1}}
 
-\renewcommand\citeform[1]{}
+\title{B.P.W.}
+\author{\url{https://book.bpw.family}}
 
 \begin{document}
 
