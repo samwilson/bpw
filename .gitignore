@@ -1,0 +1,13 @@
+*.aux
+*.idx
+*.toc
+*.ind
+*.log
+*.out
+*.brf
+*.fls
+*.fdb_latexmk
+*.ilg
+*.pdf
+./public_html/BPW.pdf
+./build

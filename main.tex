@@ -1,0 +1,89 @@
+\documentclass[a4paper]{book}
+\usepackage{url, graphicx, wrapfig, ifthen, enumitem, imakeidx, microtype, booktabs, caption}
+\usepackage{currfile, multicol, float, subcaption, textcomp, fullpage}
+
+\usepackage[pagebackref=true]{hyperref}
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{\emph{%
+	\ifcase #1 Not cited.\todo{Not cited!}%
+	\or Cited on page~#2.%
+	\else Cited on pages #2.%
+	\fi%
+}}
+
+
+\usepackage[textsize=tiny]{todonotes}
+\usepackage[numbib, numindex]{tocbibind}
+\usepackage[superscript]{cite}
+
+\makeindex[intoc]
+\setcounter{secnumdepth}{0}
+
+\title{B.P.W.}
+\author{\url{https://book.bpw.family}}
+
+\usepackage{relsize, etoolbox} % http://ctan.org/pkg/{relsize,etoolbox}
+\AtBeginEnvironment{quotation}{\smaller} % Step font down one size relative to current font.
+\patchcmd{\quotation}{\rightmargin}{\leftmargin 2em \rightmargin}{}{}
+
+\hypersetup{
+  colorlinks = true,  % Colours links instead of ugly boxes
+  urlcolor   = blue,  % Colour for external hyperlinks
+  linkcolor  = black, % Colour of internal links
+  citecolor  = black  % Colour of citations
+}
+
+% ---- \bioref{biographies-file-name}
+% The tricky stuff here is explained at https://tex.stackexchange.com/a/357590
+\newcommand{\bioref}[1]{%
+	\expandafter\index{\getnamereftext{#1}}%
+	\textsc{\nameref{#1}}%
+}
+\makeatletter
+\newcommand{\getnamereftext}[1]{%
+	\@ifundefined{r@#1}{}{%
+		\unexpanded\expandafter\expandafter\expandafter{%
+			\expandafter\expandafter\expandafter\@thirdoffive\csname r@#1\endcsname
+		}%
+	}%
+}
+
+% ---- \f{fig-ref}
+\newcommand{\f}[1]{Fig.~\ref{#1}}
+
+% ---- \idx{Index words}
+\newcommand{\idx}[1]{#1\index{#1}}
+
+\renewcommand\citeform[1]{}
+
+\begin{document}
+
+\maketitle
+ 
+\thispagestyle{empty}
+\begin{center}\footnotesize
+This book is available online at \url{https://book.bpw.family}.
+Everyone is invited to submit new research, error reports, and suggestions for improvement
+via the issue tracker at \url{https://github.com/samwilson/bpw/issues}.
+
+\vspace{1cm}
+
+Copyright \copyright\ 2025 by the authors;
+see \url{https://github.com/samwilson/bpw/graphs/contributors} for details.
+
+Some rights reserved (CC-BY-SA 4.0).
+
+This book is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-sa/4.0/}.
+\end{center}
+
+\tableofcontents
+
+\input{1_intro}
+\input{2_family}
+
+% End matter
+\input{bibliography}
+\printindex
+
+\end{document}
