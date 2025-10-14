@@ -1,0 +1,23 @@
+{% import "_macros.twig" as _macros %}
+
+{% set data = wikidata_query( '
+SELECT ?item ?title ?date ?journal ?doi WHERE {
+  ?item wdt:P50 wd:Q89289 .
+  OPTIONAL{ ?item wdt:P1476 ?title } .
+  OPTIONAL{ ?item wdt:P577 ?date } .
+  OPTIONAL{ ?item wdt:P1433 ?journal } .
+  OPTIONAL{ ?item wdt:P356 ?doi } .
+} ORDER BY ASC(?date)', 'query-scholarly.wikidata.org' ) %}
+
+<ol>
+{% for row in data %}
+
+    {% set journal_qid = row.journal | basename %}
+    {% set journal = get_json( 'https://www.wikidata.org/wiki/Special:EntityData/' ~ journal_qid ~ '.json' ).entities[journal_qid] %}
+    <li>
+        {{ _macros.date( row.date, 'year' )|trim }}
+        <em>{{ row.title }}</em>, {{ journal.labels.en.value }}{% if row.doi is defined and row.doi %}, <a href="https://doi.org/{{ row.doi }}">{{ row.doi }}</a>{% endif %}
+    </li>
+
+{% endfor %}
+</ol>
