@@ -1,0 +1,84 @@
+{% macro date(datetime, precision, format='html') %}
+    {% if not instanceof(datetime,'\DateTime') %}
+        {% set datetime = date_create(datetime) %}
+    {% endif %}
+    {% if format == 'html' %}
+        <time datetime="{{ datetime.format('c') }}">
+            {% if precision == 'circa' %}
+                <abbr title="circa">c.</abbr>&nbsp;{{ datetime.format('Y') }}
+            {% elseif precision == 'year' %}
+                {{ datetime.format('Y') }}
+            {% elseif precision == 'month' %}
+                {{ datetime.format('Y F') }}
+            {% else %}
+                {{ datetime.format('Y F j l') }}
+            {% endif %}
+        </time>
+    {% else %}
+        {% if precision == 'circa' %}
+            c.{{ datetime.format('Y') }}
+        {% elseif precision == 'year' %}
+            {{ datetime.format('Y') }}
+        {% elseif precision == 'month' %}
+            {{ datetime.format('Y F') }}
+        {% else %}
+            {{ datetime.format('Y F j l') }}
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{% macro image(image, link = true, img_classes = '', format = 'html') %}
+    {% set img_src = '' %}
+    {% set img_href = '' %}
+    {% set width = null %}
+    {% if image.width is defined %}
+        {% set width = image.width %}
+    {% endif %}
+    {% set height = null %}
+    {% if image.height is defined %}
+        {% set height = image.height %}
+    {% endif %}
+
+    {% if image.commons is defined %}
+        {% set commons = commons(image.commons) %}
+        {% set img_src = commons.imageinfo.0.thumburl %}
+        {% set img_href = commons.imageinfo.0.descriptionurl %}
+        {% set width = commons.imageinfo.0.thumbwidth %}
+        {% set height = commons.imageinfo.0.thumbheight %}
+
+    {% elseif image.ia is defined %}
+        {% set img_href = 'https://archive.org/details/' ~ image.ia %}
+        {% set img_src = 'https://archive.org/download/' ~ image.ia ~ '/' ~ image.ia_file %}
+
+    {% endif %}
+
+    {% set img_width = 500 %}
+    {% set img_height = null %}
+    {% if width and height %}
+        {% set ratio = width / img_width  %}
+        {% set img_height = height / ratio  %}
+    {% endif %}
+
+    {% if format == 'html' %}
+        {% if link %}<a href="{{ img_href }}">{% endif %}
+        <img src="{{ img_src }}" width="{{ img_width }}" height="{{img_height}}" alt="{{alt|default('')}}" class="{{ img_classes }}" />
+        {% if link %}</a>{% endif %}
+    {% else %}
+        \includegraphics[{% if image.portrait|default(false) %}height=0.35\textheight{% else %}width=0.7\textwidth{% endif %}]{{ '{' }}{{ tex_url( img_src )|raw }}{{ '}' }}
+    {% endif %}
+{% endmacro %}
+
+{% macro wikitree_date(date, status) %}
+    {% set format = 'j F Y' %}
+    {% if date ends with '-00-00' %}
+        {% set format = 'Y' %}
+    {% elseif date ends with '-00' %}
+        {% set format = 'F Y' %}
+    {% endif %}
+    {% if date != '0000-00-00' %}
+        {% if status == 'guess' %}
+            <abbr title="circa">c.</abbr>
+        {% endif %}
+        {{ date|date(format) }}
+    {% endif %}
+{% endmacro %}

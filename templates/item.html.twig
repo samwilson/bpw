@@ -1,0 +1,23 @@
+{% import "_macros.twig" as _macros %}
+
+{% extends 'index.html.twig' %}
+
+{% block body %}
+
+    {% if page.metadata.images is defined and page.metadata.images %}
+        <figure class="figure float-end ms-md-3">
+            {{ _macros.image( page.metadata.images.0, true, 'figure-img img-fluid' ) }}
+        </figure>
+    {% endif %}
+    <dl class="border-bottom">
+        <dt>Title:</dt>
+        <dd>{{ page.metadata.title }}</dd>
+        <dt>Date:</dt>
+        <dd>{{ _macros.date(page.metadata.date, page.metadata.date_precision) }}</dd>
+        <dt>Description:</dt>
+        <dd>{{ page.metadata.description|md2html|raw }}</dd>
+    </dl>
+
+    {{page.body|md2html|raw}}
+
+{% endblock %}

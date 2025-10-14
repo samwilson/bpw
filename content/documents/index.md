@@ -1,6 +1,0 @@
----
-template: documents
-title: Documents
----
-
-

@@ -4,4 +4,4 @@
 {% else %}
     {% set label = target.title %}
 {% endif %}
-<a href="{{ page.link(shortcode.attrs.1) }}.{{shortcode.attrs.3|default('html')}}" title="{{ target.title }}">{{ label }}</a>
+<a href="{{ page.link(target.id) }}.{{shortcode.attrs.3|default('html')}}" title="{{ target.title }}">{{ label }}</a>

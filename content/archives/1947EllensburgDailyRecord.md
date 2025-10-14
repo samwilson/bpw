@@ -1,11 +1,14 @@
 ---
-template: document
+template: item
 title: British Argue on Test Tube Babies
 date: 1947-04-03
+date_precision: day
 description: |
   Newspaper clipping from page 10 of the 3 April 1947 edition of the *Ellensburg Daily Record* (Washington, USA).
   Via [Google Books](https://books.google.com.au/books?id=d9ZOAAAAIBAJ&lpg=PA10&pg=PA10#v=onepage&q&f=false).
-image: https://archive.org/download/19470403_EllensburgDailyRecord_p10/1947-04-03_Ellensburg_Daily_Record.png
+images:
+  - ia: 19470403_EllensburgDailyRecord_p10
+    ia_file: 1947-04-03_Ellensburg_Daily_Record.png
 ---
 
 ## Transcription
@@ -30,7 +33,7 @@ Lawyers said children born after artificial insemination by a stranger are ilegi
 A sociologist, Prof. E. O. James of London university, said artificial insemination by a third person
 jeopardized rather than safeguarded marital happiness.
 
-One practitioner, {link|/people/mary-barton|Dr. Mary Barton}, said there has been 300 "test tube" babies born in England
+One practitioner, Dr. Mary Barton, said there has been 300 "test tube" babies born in England
 in the last five years after articifical insemination by strangers
 and "thousands" born after artificial insemination by husbands.
 

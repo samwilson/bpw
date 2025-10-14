@@ -1,3 +1,5 @@
-{% set p = database.query('SELECT * FROM pages WHERE id = "' ~ shortcode.attrs.1 ~ '"').fetch() %}{#
+{% set target = database.query('SELECT * FROM pages WHERE id = "'~shortcode.attrs.1~'"').fetch %}{#
 
-#}\textsc{{'{'}}{% if shortcode.attrs.2 is defined %}{{shortcode.attrs.2}}{% else %}{{p.title}}{% endif %}{{'}'}}\footnote{{'{'}}\url{{'{'}}{{site.config.url ~ p.id}}.{{shortcode.attrs.3|default('html')}}{{'}'}}{{'}'}}
+#}\textsc{{'{'}}{% if shortcode.attrs.2 is defined %}{{shortcode.attrs.2}}{% else %}{{target.title}}{% endif %}{{'}'}}{#
+
+#}\footnote{{'{'}}\url{{'{'}}{{site.config.url ~ target.id}}.{{shortcode.attrs.3|default('html')}}{{'}'}}{{'}'}}

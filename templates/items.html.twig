@@ -1,19 +1,21 @@
+{% import "_macros.twig" as _macros %}
+
 {% extends 'index.html.twig' %}
 
 {% block body %}
 
-    <ul>
-    {% for d in database.query('SELECT * FROM pages WHERE template="document" ORDER BY date ASC') %}
+    <ol>
+    {% for d in database.query('SELECT * FROM pages WHERE template="item" ORDER BY date ASC') %}
 
         <li>
+            {{ _macros.date(d.date, d.date_precision) }}:
             <a href="{{page.link(d.id)}}.html">
-                {{d.date|date('Y-m-d')}}
                 <strong>{{d.title}}</strong>
             </a>
             {{d.description|md2html|raw}}
         </li>
 
     {% endfor %}
-    </ul>
+    </ol>
 
 {% endblock %}

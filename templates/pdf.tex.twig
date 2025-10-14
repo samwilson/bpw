@@ -1,7 +1,11 @@
 {% autoescape 'tex' %}
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{book}
 
-\usepackage{graphicx, url, listings, float, }
+\usepackage{ graphicx, url, listings, float, booktabs, longtable, array, lscape }
+
+\usepackage{enotez}
+\setenotez{list-name=References, backref=true, totoc=chapter}
+\let\footnote=\endnote
 
 \usepackage{hyperref}
 \hypersetup{
@@ -20,7 +24,8 @@
     showstringspaces=true
 }
 
-\title{B.P.W. Family (Public Website)}
+\title{ {{site.config.title}} }
+\author{ \url{ {{site.config.url}} } }
 
 \begin{document}
     \maketitle
@@ -28,14 +33,15 @@
 
     {{ page.body|md2latex|raw }}
 
-    {% for p in database.query('SELECT * FROM pages WHERE id NOT LIKE "/bpw-family-public-site" ORDER BY print_order ASC, title ASC').fetchAll() %}
+    {% for p in database.query( 'SELECT * FROM pages WHERE id LIKE "/about/%" ORDER BY id ASC' ).fetchAll() %}
 
-        \section{ {{ p.title }} }
-        \url{ {{site.config.url}}{{p.id}}.html }
+        \chapter{ {{ p.title }} }
 
         {{ p.body|md2latex|raw }}
 
     {% endfor %}
+
+\printendnotes
 
 \end{document}
 {% endautoescape %}

@@ -1,10 +1,12 @@
 ---
-template: document
 title: Death certificate of Bertold Paul Wiesner
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bertold_Wiesner_death_certificate_1972.png/544px-Bertold_Wiesner_death_certificate_1972.png
+images:
+  - commons: Bertold_Wiesner_death_certificate_1972.png
 date: 1972-01-11
 date_precision: day
-description: Death certificate of Bertold Paul Wiesner, who died of a pulmonary embolism on 7 January 1972 in Ealing, UK.
+description: |
+  Death certificate of Bertold Paul Wiesner,
+  who died of a pulmonary embolism on 7 January 1972 in Ealing, UK.
 ---
 
 ## Transcription

@@ -1,0 +1,6 @@
+{% import "_macros.twig" as _macros %}
+{% set i = database.query( 'SELECT * FROM pages WHERE id = "/archives/' ~ shortcode.attrs.1 ~ '"' ).fetch() %}{#
+#}{% if i %}{#
+    #}\footnote{ {{i.title}}, {{_macros.date(i.date, i.date_precision, 'latex')}}\\
+\url{ {{site.config.url}}{{i.id}}.html } }{#
+#}{% endif %}

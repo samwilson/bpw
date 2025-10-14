@@ -1,7 +1,10 @@
+{% import "_macros.twig" as _macros %}
+
 <figure class="figure
   {% if shortcode.attrs.align is defined and shortcode.attrs.align == 'left' %}float-start me-3{% endif %}
   {% if shortcode.attrs.align is defined and shortcode.attrs.align == 'right' %}float-end ms-3{% endif %}
 ">
-    <img src="{{shortcode.attrs.src}}" class="figure-img img-fluid rounded" alt="{{shortcode.attrs.alt}}" />
+    {{ _macros.image( shortcode.attrs ) }}
+{#    <img src="{{shortcode.attrs.src}}" class="figure-img img-fluid rounded" alt="{{shortcode.attrs.alt}}" />#}
     <figcaption class="figure-caption">{{shortcode.body|md2html|raw}}</figcaption>
 </figure>
